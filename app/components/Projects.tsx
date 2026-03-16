@@ -1,6 +1,7 @@
 "use client";
-import { useState, useMemo } from "react";
 
+import { useState, useMemo } from "react";
+import Image from "next/image";
 type Project = {
   id: string;
   name: string;
@@ -113,7 +114,7 @@ const Projects = () => {
             className="rounded-lg overflow-hidden bg-[#222]/40 border border-[#333]/40 hover:border-[#444]/60 transition-colors"
           >
             <div className="aspect-video bg-[#1a1a1a] relative">
-              <img
+              <Image
                 src={project.image}
                 alt={project.name}
                 className="w-full h-full object-cover object-top"

@@ -38,7 +38,7 @@ const About = () => {
 
           <p className="leading-loose mb-4 text-lg font-thin">
             {" "}
-            When I'm not working, I'm usually out touching grass, often out
+            When I&apos;m not working, I&apos;m usually out touching grass, often out
             djing or dance kizomba or learning new things.
           </p>
         </div>

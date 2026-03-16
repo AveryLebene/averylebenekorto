@@ -3,7 +3,7 @@ const Contact = () => {
     <div className="lg:py-6 pb-10 lg:px-8 px-4">
       <div className="flex justify-between flex-col md:flex-row">
         <div>
-          <h4 className="font-bold text-3xl mb-4">Let's connect</h4>
+          <h4 className="font-bold text-3xl mb-4">Let&apos;s connect</h4>
           <p className="pr-12">
             I am always looking for new opportunities to connect and
             collaborate.{" "}
