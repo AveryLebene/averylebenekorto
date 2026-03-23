@@ -1,4 +1,5 @@
-import Image from "next/image";
+import { MotionNextImage } from "./MotionNextImage";
+
 const About = () => {
   return (
     <div className="lg:p-12  lg:px-8 px-4">
@@ -6,7 +7,7 @@ const About = () => {
         <div className="lg:max-w-7xl w-full lg:px-24 xl:px-64  text-gray-300">
           <div className="flex justify-center items-center mb-12">
             <div className="w-[200px] h-[200px] rounded-full overflow-hidden shrink-0">
-              <Image
+              <MotionNextImage
                 src="/images/avery-3.jpg"
                 alt="Avery Lebene Korto"
                 width={200}
@@ -39,7 +40,7 @@ const About = () => {
           <p className="leading-loose mb-4 text-lg font-thin">
             {" "}
             When I&apos;m not working, I&apos;m usually out touching grass, often out
-            djing or dance kizomba or learning new things.
+            djing, dancing  kizomba or learning something new.
           </p>
         </div>
       </div>

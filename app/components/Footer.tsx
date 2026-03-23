@@ -4,7 +4,7 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <div className="">
-      <div className="lg:max-w-md max-w-sm  w-full mx-auto border-t border-white/10" aria-hidden="true" />
+      <div className="lg:max-w-md max-w-sm  w-full mx-auto border-t border-white/20" aria-hidden="true" />
       <div className="justify-center font-thin text-gray-100 flex flex-col lg:flex-row gap-4 items-center lg:justify-between  py-6 px-4 lg:px-12">
         <p className="italiano-regular"> © {new Date().getFullYear()} Avery Lebene Korto</p>
         <div className="flex flex-row items-center gap-4">

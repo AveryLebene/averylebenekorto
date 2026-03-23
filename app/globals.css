@@ -1,10 +1,11 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Sora:wght@100..800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Sora:wght@100..800&display=swap');
 
 
 
@@ -63,3 +64,5 @@ font-family: "Plus Jakarta Sans", sans-serif;
   max-width: 1600px;
   margin: auto;
 } */
+
+/* Blog code blocks are rendered by react-syntax-highlighter in ArticleContent */

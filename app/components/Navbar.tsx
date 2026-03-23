@@ -10,8 +10,10 @@ import Sidebar from "@/app/components/Sidebar";
 const Navbar = () => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
-  const linkBase = " flex justify-center items-center rounded-full px-3 transition-all duration-400 hover:border-green-200 hover:border hover:pointer";
-  const activeStyle = "border-green-200 border";
+  const linkBase =
+    "flex justify-center items-center rounded-full px-3 py-1 transition-all duration-300 border border-transparent hover:border-green-200/60 hover:text-green-200";
+  const activeStyle = "border-green-200 text-green-200";
+  const linkText = "text-[#c7c7c7] hover:text-green-200 transition-colors duration-200";
   const toggleMenu = (): any => {
     setIsOpen(!isOpen);
     // if (isOpen){
@@ -61,19 +63,22 @@ const Navbar = () => {
               </svg>
             </button>
           </div>
-          <div className="hidden md:block bg-[#1a1a1a] rounded-full px-4 py-1 border">
-            <ul className="flex gap-10 cursor-pointer justify-center items-center">
+          <div className="hidden md:block bg-[#1a1a1a] rounded-full px-4 py-1 border border-[#333]/60">
+            <ul className="flex gap-6 cursor-pointer justify-center items-center">
               <li className={`${linkBase} ${pathname === "/" ? activeStyle : ""}`}>
-                <Link href="/" className="flex justify-center items-center">Home</Link>
+                <Link href="/" className={`flex justify-center items-center ${pathname === "/" ? "text-green-200" : linkText}`}>Home</Link>
               </li>
-              <li className={` ${linkBase} ${pathname === "/projects" ? activeStyle : ""}`}>
-                <Link href="/projects" className="flex justify-center items-center">Projects</Link>
+              <li className={`${linkBase} ${pathname === "/projects" ? activeStyle : ""}`}>
+                <Link href="/projects" className={`flex justify-center items-center ${pathname === "/projects" ? "text-green-200" : linkText}`}>Projects</Link>
               </li>
-              <li className={` ${linkBase} ${pathname === "/about" ? activeStyle : ""}`}>
-                <Link href="/about" className="flex justify-center items-center">About</Link>
+              <li className={`${linkBase} ${pathname === "/blogs" ? activeStyle : ""}`}>
+                <Link href="/blog" className={`flex justify-center items-center ${pathname === "/blog" ? "text-green-200" : linkText}`}>Blog</Link>
               </li>
-              <li className={` ${linkBase} ${pathname === "/contact" ? activeStyle : ""}`}>
-                <Link href="/contact" className="flex justify-center items-center">Contact</Link>
+              <li className={`${linkBase} ${pathname === "/about" ? activeStyle : ""}`}>
+                <Link href="/about" className={`flex justify-center items-center ${pathname === "/about" ? "text-green-200" : linkText}`}>About</Link>
+              </li>
+              <li className={`${linkBase} ${pathname === "/contact" ? activeStyle : ""}`}>
+                <Link href="/contact" className={`flex justify-center items-center ${pathname === "/contact" ? "text-green-200" : linkText}`}>Contact</Link>
               </li>
             </ul>
           </div>
