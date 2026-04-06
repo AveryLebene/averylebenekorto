@@ -12,9 +12,15 @@ type Props = Readonly<{
   project: PreviewProject;
   /** When set, the image area is clickable (toggle stays above). */
   imageLinkHref?: string;
+  /** Use eager for the first above-the-fold card to improve LCP. */
+  loading?: "eager" | "lazy";
 }>;
 
-export function ProjectMediaPreview({ project, imageLinkHref }: Props) {
+export function ProjectMediaPreview({
+  project,
+  imageLinkHref,
+  loading = "lazy",
+}: Props) {
   const narrow = useNarrowViewport();
   const [locked, setLocked] = useState<"desktop" | "mobile" | null>(null);
   const effective = locked ?? (narrow ? "mobile" : "desktop");
@@ -26,13 +32,14 @@ export function ProjectMediaPreview({ project, imageLinkHref }: Props) {
 
   const renderPhone = (src: string, alt: string) => (
     <div className="absolute inset-0 flex items-center justify-center p-4">
-      <div className="relative h-[min(92%,420px)] aspect-[9/19] rounded-[1.35rem] overflow-hidden border-2 border-[#333] shadow-lg bg-black">
+      <div className="relative h-[min(92%,420px)] aspect-[390/844]  overflow-hidden border-2 border-[#333] shadow-lg bg-black">
         <MotionNextImage
           src={src}
           alt={alt}
-          className="w-full h-full object-cover object-top"
-          width={232}
-          height={490}
+          className="w-full h-full object-contain object-top"
+          width={390}
+          height={844}
+          loading={loading}
           onError={(e) => {
             const t = e.target as HTMLImageElement;
             t.style.display = "none";
@@ -48,7 +55,8 @@ export function ProjectMediaPreview({ project, imageLinkHref }: Props) {
       alt={alt}
       width={400}
       height={225}
-      className="w-full h-full object-cover object-top"
+      className="w-full h-full object-contain object-top"
+      loading={loading}
       onError={(e) => {
         const t = e.target as HTMLImageElement;
         t.style.display = "none";

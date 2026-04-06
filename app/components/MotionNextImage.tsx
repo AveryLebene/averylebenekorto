@@ -2,11 +2,11 @@
 
 import Image, { type ImageProps } from "next/image";
 import { motion } from "framer-motion";
-import { useCallback, useState } from "react";
+import { useCallback, useState, type SyntheticEvent } from "react";
 import { motionMediaDuration, motionSoftEase } from "@/lib/motion";
 
 export function MotionNextImage({
-  onLoadingComplete,
+  onLoad,
   onError,
   className,
   fill,
@@ -14,12 +14,12 @@ export function MotionNextImage({
 }: ImageProps) {
   const [visible, setVisible] = useState(false);
 
-  const handleComplete = useCallback(
-    (img: HTMLImageElement) => {
+  const handleLoad = useCallback(
+    (e: SyntheticEvent<HTMLImageElement>) => {
       setVisible(true);
-      onLoadingComplete?.(img);
+      onLoad?.(e);
     },
-    [onLoadingComplete]
+    [onLoad]
   );
 
   const handleError = useCallback(
@@ -45,7 +45,7 @@ export function MotionNextImage({
         {...rest}
         fill={fill}
         className={className}
-        onLoadingComplete={handleComplete}
+        onLoad={handleLoad}
         onError={handleError}
       />
     </motion.div>

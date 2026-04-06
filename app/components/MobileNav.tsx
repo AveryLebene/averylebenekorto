@@ -7,7 +7,7 @@ import { FiHome, FiFolder, FiBook, FiUser, FiMail } from "react-icons/fi";
 const navItems = [
   { href: "/", label: "Home", icon: FiHome },
   { href: "/projects", label: "Projects", icon: FiFolder },
-  { href: "/blog", label: "Blog", icon: FiBook },
+  // { href: "/blog", label: "Blog", icon: FiBook },
   { href: "/about", label: "About", icon: FiUser },
   { href: "/contact", label: "Contact", icon: FiMail },
 ];

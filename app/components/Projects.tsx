@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import Link from "next/link";
 import { useState, useMemo } from "react";
 import { pageContentStagger } from "@/lib/motion";
 import { PROJECTS } from "@/lib/projects";
@@ -12,13 +13,13 @@ const FILTER_TAGS = [
   ALL_TAG,
   "React",
   "Next.js",
+  "Tailwind CSS",
   "Supabase",
   "Web app",
-  "Nuxt.js",
+  "Landing",
   "TypeScript",
-  "Bootstrap",
-  "Tailwind CSS",
-  "Sass",
+  "Design system",
+  "Documentation",
 ];
 
 const Projects = () => {
@@ -76,14 +77,18 @@ const Projects = () => {
         variants={v.grid}
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"
       >
-        {filteredProjects.map((project) => {
+        {filteredProjects.map((project, index) => {
           return (
             <motion.article
               key={project.id}
               variants={v.card}
               className="rounded-lg overflow-hidden bg-[#222]/40 border border-[#333]/40 hover:border-[#444]/60 transition-colors"
             >
-              <ProjectMediaPreview project={project} />
+              <ProjectMediaPreview
+                project={project}
+                imageLinkHref={`/projects/${project.id}`}
+                loading={index === 0 ? "eager" : "lazy"}
+              />
             <div className="p-4">
               <h3 className="text-xl font-semibold text-white mb-2">
                 {project.name}
@@ -106,18 +111,24 @@ const Projects = () => {
                   </span>
                 )}
               </div>
-              {project.detailsUrl ? (
-                <a
-                  href={project.detailsUrl}
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+                <Link
+                  href={`/projects/${project.id}`}
                   className="text-green-200 text-sm font-medium hover:underline"
                 >
-                  View Details →
-                </a>
-              ) : (
-                <span className="text-green-200 text-sm font-medium">
-                  View Details →
-                </span>
-              )}
+                  View details →
+                </Link>
+                {project.liveUrl ? (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#c7c7c7] text-sm font-medium hover:text-green-200 hover:underline"
+                  >
+                    Live site ↗
+                  </a>
+                ) : null}
+              </div>
             </div>
           </motion.article>
           );

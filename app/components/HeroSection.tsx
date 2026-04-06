@@ -33,8 +33,9 @@ const HeroSection = () => {
               className="text-center font-thin text-gray-300 lg:text-xl md:text-start max-w-xl pt-4 leading-7"
             >
               <span>
-                a web developer building clean, idea-driven digital products. I
-                am interested in creative tools, music tech, and thoughtful UI.
+                I'm a Frontend Engineer who transforms ideas into seamless web
+                experiences. With 3+ years working alongside design and product
+                teams, I thrive where creativity meets code.
               </span>
             </motion.p>
           </div>
@@ -43,21 +44,23 @@ const HeroSection = () => {
             variants={v.block}
             className="flex lg:justify-start justify-center lg:mb-10"
           >
-            <button className=" bg-green-200 px-6 py-3 font-bold rounded-full mt-20 text-black">
+            <a
+              href="/cv.pdf"
+              download="Avery-Lebene-Korto-Resume.pdf"
+              className="inline-flex bg-green-200 px-6 py-3 font-bold rounded-full mt-20 text-black transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-200"
+            >
               Download Resume
-            </button>
+            </a>
           </motion.div>
         </motion.div>
-        <motion.div
-          variants={v.block}
-          className="sm:mb-16 mb-6 lg:mb-0"
-        >
+        <motion.div variants={v.block} className="sm:mb-16 mb-6 lg:mb-0">
           <div className=" text-center ">
             <div className="mx-auto  sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px]  lg:w-[500px] lg:h-[500px] xl-h-[600px] xl-w-[600px] rounded-full overflow-hidden shrink-0">
               <MotionNextImage
                 src={avery}
                 alt="portrait picture"
                 placeholder="empty"
+                priority
                 className="mx-auto w-[600px] h-[600px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px]  lg:w-[500px] lg:h-[500px] xl-h-[600px] xl-w-[600px] rounded-full object-cover"
               />
             </div>
