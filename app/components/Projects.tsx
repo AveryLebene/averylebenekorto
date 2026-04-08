@@ -16,7 +16,6 @@ const FILTER_TAGS = [
   "Tailwind CSS",
   "Supabase",
   "Web app",
-  "Landing",
   "TypeScript",
   "Design system",
   "Documentation",

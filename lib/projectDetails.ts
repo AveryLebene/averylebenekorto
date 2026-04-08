@@ -36,7 +36,7 @@ const asrannaGallery: ProjectGalleryItem[] = [
 const hubtelUxGallery: ProjectGalleryItem[] = [
   { src: "/images/projects/hubtel-ux-desktop.png", label: "Desktop (1280×720)" },
   { src: "/images/projects/hubtel-ux-tablet.png", label: "Tablet (834×1112)" },
-  { src: "/images/projects/hubtel-ux-mobile.png", label: "Mobile (390×844)" },
+  { src: "/images/projects/hubtel-mobile.png", label: "Mobile (390×844)" },
 ];
 
 export const PROJECT_DETAILS: Record<string, ProjectDetail> = {

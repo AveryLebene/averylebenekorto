@@ -126,7 +126,7 @@ const Navbar = () => {
             rel="noopener noreferrer"
             className={cvButtonClass}
           >
-            View CV
+            View Resume
           </a>
         </div>
 
@@ -224,7 +224,7 @@ const Navbar = () => {
                   onClick={closeMenu}
                   className="shrink-0 rounded-full bg-green-200 px-5 py-2.5 text-center text-xs font-semibold tracking-wide text-[#1a1a1a] transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e8dcc8] sm:px-6 sm:text-sm"
                 >
-                  View CV
+                  View Resume
                 </a>
               <div
                 className="mt-7 flex flex-wrap items-center justify-center gap-x-7 gap-y-4"
