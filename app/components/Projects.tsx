@@ -15,7 +15,6 @@ const FILTER_TAGS = [
   "Next.js",
   "Tailwind CSS",
   "Supabase",
-  "Web app",
   "TypeScript",
   "Design system",
   "Documentation",

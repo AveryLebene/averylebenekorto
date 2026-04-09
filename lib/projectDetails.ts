@@ -30,13 +30,15 @@ const hitchedGallery: ProjectGalleryItem[] = [
 
 const asrannaGallery: ProjectGalleryItem[] = [
   { src: "/images/projects/asranna-desktop.png", label: "Desktop" },
-  { src: "/images/projects/asrana-tab.png", label: "Tablet " }
+  { src: "/images/projects/asrana-tab.png", label: "Tablet " },
+  { src: "/images/projects/asranna-mob.png", label: "Mobile" },
 ];
 
 const hubtelUxGallery: ProjectGalleryItem[] = [
   { src: "/images/projects/hubtel-ux-desktop.png", label: "Desktop (1280×720)" },
   { src: "/images/projects/hubtel-ux-tablet.png", label: "Tablet (834×1112)" },
   { src: "/images/projects/hubtel-mobile.png", label: "Mobile (390×844)" },
+  { src: "/images/projects/hubtel-docs.png", label: "Chips Documentation" },
 ];
 
 export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
@@ -98,8 +100,8 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
   "hubtel-ux": {
     id: "hubtel-ux",
     about: [
-      "The Hubtel UX System site is the public hub for how Hubtel designs product experiences: a shared design system, a story system grounded in user goals, research insights, and learning resources for teams building at scale.",
-      "It acts as the connective tissue between design and engineering—so components, patterns, and narrative framing stay aligned as products evolve.",
+      "The Hubtel UX System site is a private hub for how Hubtel designs product experiences: a shared design system, a story system grounded in user goals, research insights, and learning resources for teams building at scale.",
+      "It acts as the connective tissue between design and engineering, so components, patterns, and narrative framing stay aligned as products evolve.",
     ],
     goal:
       "Give designers and engineers one trusted place to learn Hubtel’s UX standards, reuse patterns, and ship experiences that feel clear, consistent, and intentional across the product suite.",

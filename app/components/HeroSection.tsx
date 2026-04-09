@@ -22,12 +22,12 @@ const HeroSection = () => {
           variants={v.section}
         >
           <div className="lg:flex-1">
-            <motion.h2
+            <motion.h1
               variants={v.block}
               className=" md:text-4xl text-3xl lg:leading-[5rem] text-center md:text-start italianno-regular"
             >
               Hi, I&apos;m Avery Lebene Korto,
-            </motion.h2>
+            </motion.h1>
             <motion.p
               variants={v.block}
               className="text-center font-thin text-gray-300 lg:text-xl md:text-start max-w-xl pt-4 leading-7"

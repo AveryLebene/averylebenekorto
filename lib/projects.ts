@@ -19,23 +19,23 @@ export const PROJECTS: Project[] = [
     tags: ["Web app", "Next.js", "Tailwind CSS", "TypeScript", "Supabase"],
     liveUrl: "https://repnotes.vercel.app/",
   },
-  {
-    id: "hitched",
-    name: "Hitched",
-    description:
-      "A dating platform landing experience—find your match with a clear, welcoming first impression.",
-    image: "/images/projects/hitched-desktop.png",
-    imageMobile: "/images/projects/hitched-mobile.png",
-    tags: ["Tailwind CSS", "React", "Landing"],
-    liveUrl: "https://hitched-sand.vercel.app/",
-  },
+  // {
+  //   id: "hitched",
+  //   name: "Hitched",
+  //   description:
+  //     "A dating platform landing experience—find your match with a clear, welcoming first impression.",
+  //   image: "/images/projects/hitched-desktop.png",
+  //   imageMobile: "/images/projects/hitched-mobile.png",
+  //   tags: ["Tailwind CSS", "React", "Landing"],
+  //   liveUrl: "https://hitched-sand.vercel.app/",
+  // },
   {
     id: "asranna",
     name: "Asranna",
     description:
       "Remember important dates, sync with your calendar, and plan ahead for the people you care about.",
     image: "/images/projects/asranna-desktop.png",
-    imageMobile: "/images/projects/asranna-mobile.png",
+    imageMobile: "/images/projects/asranna-mob.png",
     tags: ["Tailwind CSS", "React", "Axios"],
     liveUrl: "https://main.d1bv76t7u8u3k6.amplifyapp.com/",
   },
@@ -43,10 +43,10 @@ export const PROJECTS: Project[] = [
     id: "hubtel-ux",
     name: "Hubtel UX System",
     description:
-      "Hubtel’s home for UX systems—design system, story system, research insights, and learning resources for consistent product experiences.",
+      "Hubtel’s home for UX systems and learning resources for consistent product experiences.",
     image: "/images/projects/hubtel-ux-desktop.png",
-    imageMobile: "/images/projects/hubtel-ux-mobile.png",
-    tags: ["Web app", "Design system", "Documentation"],
+    imageMobile: "/images/projects/hubtel-mobile.png",
+    tags: ["Design system", "Documentation"],
     liveUrl: "https://ux.hubtel.com/",
   },
 ];
