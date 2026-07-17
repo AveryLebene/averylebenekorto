@@ -1,6 +1,6 @@
 "use client";
 
-import { MotionImg } from "./MotionImg";
+import { MotionNextImage } from "./MotionNextImage";
 
 type Item = Readonly<{ src: string; label: string }>;
 
@@ -28,7 +28,7 @@ export function ProjectDetailGallery({ items }: Props) {
                     : "aspect-video rounded-lg overflow-hidden bg-[#1a1a1a] border border-[#333]/40"
                 }
               >
-                <MotionImg
+                <MotionNextImage
                   src={item.src}
                   alt=""
                   className={
@@ -38,6 +38,7 @@ export function ProjectDetailGallery({ items }: Props) {
                   }
                   width={portrait ? 390 : 1280}
                   height={portrait ? 844 : 720}
+                  sizes={portrait ? "(min-width: 768px) 480px, 90vw" : "(min-width: 768px) 800px, 100vw"}
                   loading="lazy"
                 />
               </div>

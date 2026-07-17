@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { getPostBySlug, getBlogPostUrl } from "@/lib/blog";
 import { fetchArticleContentRich } from "@/lib/article";
 import ArticleContent from "@/app/components/ArticleContent";
-import { MotionImg } from "@/app/components/MotionImg";
+import { MotionNextImage } from "@/app/components/MotionNextImage";
 
 function formatDate(iso: string): string {
   try {
@@ -73,13 +73,13 @@ export default async function BlogPostPage({
         </Link>
 
         {post.image_url && (
-          <div className="aspect-video rounded-lg overflow-hidden bg-[#1a1a1a] mb-6">
-            <MotionImg
+          <div className="aspect-video rounded-lg overflow-hidden bg-[#1a1a1a] mb-6 relative">
+            <MotionNextImage
               src={post.image_url}
               alt=""
-              className="w-full h-full object-cover"
-              width={800}
-              height={450}
+              fill
+              className="object-cover"
+              sizes="(min-width: 768px) 768px, 100vw"
               loading="lazy"
             />
           </div>

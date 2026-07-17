@@ -10,6 +10,16 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
+    id: "furrcity",
+    name: "FurrCity",
+    description:
+      "A marketplace connecting pet owners in Accra with groomers, vets, trainers, and daycare providers.",
+    image: "/images/projects/furrcity-desktop.png",
+    imageMobile: "/images/projects/furrcity-mobile.png",
+    tags: ["Web app", "Next.js", "Tailwind CSS", "TypeScript", "Supabase"],
+    liveUrl: "https://furrcity.com/",
+  },
+  {
     id: "repnote",
     name: "RepNote",
     description:

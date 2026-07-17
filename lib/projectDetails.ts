@@ -14,12 +14,30 @@ export type ProjectDetail = Readonly<{
   gallery: readonly ProjectGalleryItem[];
 }>;
 
+const furrcityGallery: ProjectGalleryItem[] = [
+  { src: "/images/projects/furrcity-desktop.png", label: "Explore Desktop" },
+  { src: "/images/projects/furrcity-mobile.png", label: "Explore Mobile" },
+  { src: "/images/projects/furrcity-provider-desktop.png", label: "Provider Details Desktop" },
+  { src: "/images/projects/furrcity-provider-mobile.png", label: "Provider Details Mobile" },
+  { src: "/images/projects/furrcity-pet-desktop.png", label: "Pet Profile Desktop" },
+  { src: "/images/projects/furrcity-pet-mobile.png", label: "Pet Profile Mobile" },
+  { src: "/images/projects/furrcity-bookings-desktop.png", label: "Bookings Desktop" },
+  { src: "/images/projects/furrcity-bookings-mobile.png", label: "Bookings Mobile" },
+  { src: "/images/projects/furrcity-unifurrcity-mobile.png", label: "Unifurrcity Mobile" },
+];
+
 const repnoteGallery: ProjectGalleryItem[] = [
   { src: "/images/projects/repnote.png", label: "Login Desktop" },
   { src: "/images/projects/rep-login-mob.png", label: "Login Mobile" },
+  { src: "/images/projects/repnote-home-desktop.png", label: "Home Desktop" },
   { src: "/images/projects/rep-home.png", label: "Homescreen Mobile" },
-  { src: "/images/projects/settings-rep.png", label: "Settings Mobile" },
+  { src: "/images/projects/repnote-new-workout-desktop.png", label: "New Workout Desktop" },
+  { src: "/images/projects/repnote-workouts-desktop.png", label: "Workouts Desktop" },
+  { src: "/images/projects/repnote-workouts-mobile.png", label: "Workouts Mobile" },
   { src: "/images/projects/rep-log.png", label: "Log Workout Mobile" },
+  { src: "/images/projects/repnote-settings-desktop.png", label: "Settings Desktop" },
+  { src: "/images/projects/settings-rep.png", label: "Settings Mobile" },
+  { src: "/images/projects/repnote-profile-desktop.png", label: "Profile Desktop" },
 ];
 
 const hitchedGallery: ProjectGalleryItem[] = [
@@ -42,6 +60,20 @@ const hubtelUxGallery: ProjectGalleryItem[] = [
 ];
 
 export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
+  furrcity: {
+    id: "furrcity",
+    about: [
+      "FurrCity is a marketplace that connects pet owners in  with groomers, vets, trainers, and daycare providers and pet profile system for tracking each animal's info and care history.",
+      "It covers the full loop: browsing and filtering nearby providers, viewing provider details and hours, managing pet profiles, and tracking bookings.",
+      "Each pet gets a record, that tracks: medical info, vaccinations, weight history, temperament traits, and wellness and behavior logs, alongside a timeline of vet visits, grooming records, and daycare reports. Much of that timeline is written by the vendor side rather than the owner — when a groomer or vet completes a booking, they log the visit from their own admin portal (diagnosis and treatment, coat condition, products used, behavioral notes) and it flows straight into the pet's profile as a caregiver-sourced entry, clearly attributed and separate from what the owner logs themselves.",
+      "Pet Spotlight lets owners submit a photo of their pet to be featured on Explore; providers can also submit a photo on behalf of a pet they've serviced after a completed booking.",
+      "Unifurrcity is FurrCity's learn hub; articles and courses on pet care, filtered by species and category, and personalized to the pets on the owner's account.",
+      "Owners and providers are kept in the loop at every step of a booking — a new request, confirmation, payment, pickup-ready, or a nudge to leave a review after a visit — all sent automatically over SMS, WhatsApp, or email, plus reminders as the appointment date gets closer.",
+    ],
+    goal:
+      "Make it simple for pet owners to find trustworthy, nearby pet care and keep every pet's details in one place, from discovery through booking.",
+    gallery: furrcityGallery,
+  },
   repnote: {
     id: "repnote",
     about: [
