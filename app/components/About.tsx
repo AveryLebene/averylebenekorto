@@ -17,31 +17,30 @@ const About = () => {
             </div>
           </div>
           <p className="leading-loose mb-4 text-lg font-thin">
-            I craft digital experiences that feel effortless. Frontend
-            development is my playground, where I shape intuitive interfaces,
-            but I also dive deep into full-stack architecture to turn bold ideas
-            into real products.
-          </p>
-          <p className="leading-loose mb-4 text-lg font-thin">
-            I thrive at the intersection of strategy and execution — planning
-            systems, writing code, and seeing projects through from concept to
-            launch. Every line I write and every interface I design is guided by
-            clarity, purpose, and the user in mind.
-          </p>
-          <p className="leading-loose mb-4 text-lg font-thin">
-            {" "}
-            Outside the code, I explore new technologies, experiment with ideas,
-            and share insights along the way. For me, building great products is
-            about blending technical skill, thoughtful design, and human-focused
-            problem solving, clear thinking and sometimes stepping back to see
-            the bigger picture.
-          </p>
+  I design and build digital experiences that feel simple, intuitive, and
+  effortless to use. While frontend development is where I bring interfaces to
+  life, I also work across the stack to transform ideas into fully functional
+  products.
+</p>
 
-          <p className="leading-loose mb-4 text-lg font-thin">
-            {" "}
-            When I&apos;m not working, I&apos;m usually out touching grass, often out
-            djing, dancing  kizomba or learning something new.
-          </p>
+<p className="leading-loose mb-4 text-lg font-thin">
+  I operate at the intersection of strategy and execution, translating concepts
+  into systems, and systems into real-world solutions. From planning and
+  architecture to writing code and shipping, I focus on delivering products that
+  are not only functional, but meaningful and user-centered.
+</p>
+
+<p className="leading-loose mb-4 text-lg font-thin">
+  I’m driven by curiosity and continuous improvement. I spend time exploring new
+  technologies, experimenting with ideas, and refining how I think about product
+  design and development. To me, great products come from a balance of technical
+  depth, thoughtful design, and a clear understanding of people.
+</p>
+
+<p className="leading-loose mb-4 text-lg font-thin">
+  Outside of work, I step away to reset, reflect, and stay inspired, usually by
+  getting outdoors and disconnecting for a bit.
+</p>
         </div>
       </div>
     </div>

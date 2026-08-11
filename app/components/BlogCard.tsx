@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { getBlogPostUrl, type BlogPost } from "@/lib/blog";
-import { MotionImg } from "./MotionImg";
+import { MotionNextImage } from "./MotionNextImage";
 
 function formatDate(iso: string): string {
   try {
@@ -28,12 +28,12 @@ export default function BlogCard({ post }: BlogCardProps) {
     <article className="h-full flex flex-col rounded-lg overflow-hidden bg-[#222]/40 border border-[#333]/40 transition-all duration-300 hover:border-green-200/50 hover:shadow-lg hover:shadow-green-200/10">
       <div className="aspect-video bg-[#1a1a1a] relative">
         {post.image_url ? (
-          <MotionImg
+          <MotionNextImage
             src={post.image_url}
             alt=""
-            className="w-full h-full object-cover object-center"
-            width={400}
-            height={225}
+            fill
+            className="object-cover object-center"
+            sizes="(min-width: 768px) 400px, 100vw"
             loading="lazy"
           />
         ) : (

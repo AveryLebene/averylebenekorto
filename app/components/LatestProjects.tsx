@@ -12,7 +12,7 @@ export default function LatestProjects() {
 
   return (
     <motion.section
-      className="px-4 lg:px-8 py-12 md:py-16 max-w-6xl mx-auto w-full"
+      className="px-4 lg:px-8 py-12 md:py-16 max-w-7xl mx-auto w-full"
       variants={v.section}
       initial="hidden"
       animate="show"
@@ -35,16 +35,17 @@ export default function LatestProjects() {
           variants={v.grid}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch auto-rows-fr"
         >
-          {LATEST_PROJECTS.map((project) => {
+          {LATEST_PROJECTS.map((project, index) => {
             return (
             <motion.div key={project.id} variants={v.card} className="min-h-0">
             <div className="flex flex-col rounded-lg overflow-hidden bg-[#222]/40 border border-[#333]/40 hover:border-[#444]/60 transition-colors h-full">
               <ProjectMediaPreview
                 project={project}
-                imageLinkHref="/projects"
+                imageLinkHref={`/projects/${project.id}`}
+                loading={index === 0 ? "eager" : "lazy"}
               />
               <Link
-                href="/projects"
+                href={`/projects/${project.id}`}
                 className="p-4 flex-1 flex flex-col min-h-0"
               >
                 <h3 className="text-xl font-semibold text-white mb-2">

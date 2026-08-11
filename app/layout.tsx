@@ -5,15 +5,35 @@ import Navbar from "./components/Navbar";
 import MobileNav from "./components/MobileNav";
 
 export const metadata: Metadata = {
-  title: "Avery Lebene Korto",
-  description: "A brief introduction to me",
+  title: "Avery Lebene Korto | Software Engineer",
+  description: "A software developer based in Accra, Ghana",
+  keywords: ["Avery Lebene Korto","Avery", "Avery Lebene", "Lebhie", "Korto", "Software Engineer", "Accra, Ghana", "Software Developer", "Software Engineering", "Software Development", "Software Architect", "Software Consultant", "Software Engineer", "Software Developer", "Software Engineering",],
   icons: {
     icon: "/favicon.ico",
   },
+  openGraph: {
+    title: "Avery Lebene Korto | Software Engineer",
+    description: "A software developer based in Accra, Ghana",
+    url: "https://averylebenekor.to",
+    siteName: "Avery Lebene Korto",
+    images: [
+      { url: "/images/avery-3.jpg" },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  verification: {
+    google: "fASFua1gTfJrAshxdZbIlXAqjXe3GYfh4nnQY4dSzwU",
+  },
 
-  authors: [{ name: "Avery Lebene Korto", url: "https://averylebene.com" }],
-  creator: "Avery Lebene Korto",
-  publisher: "Avery Lebene Korto",
+  authors: [{ name: "Avery Lebene Korto", url: "https://averylebenekor.to" }],
+
   formatDetection: { email: false, address: false, telephone: false },
 };
 

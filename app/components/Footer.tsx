@@ -9,26 +9,40 @@ const Footer = () => {
         <p className="italiano-regular"> © {new Date().getFullYear()} Avery Lebene Korto</p>
         <div className="flex flex-row items-center gap-4">
           <a href="https://github.com/AveryLebene" target="_blank">
-            <Image src="./svg/github.svg" alt="x" width={40} height={40} />
+            <Image
+              src="/svg/github.svg"
+              alt="x"
+              width={40}
+              height={40}
+              className="h-10 w-10 max-w-none"
+            />
           </a>
           <a href="https://www.linkedin.com/in/avery-lebene-korto-046293253/" target="_blank">
             <Image
-              src="./svg/linkedin.svg"
+              src="/svg/linkedin.svg"
               alt="linkedin"
               width={40}
               height={40}
+              className="h-10 w-10 max-w-none"
             />
           </a>
           <a href="mailto:averylebene@gmail.com" target="_blank">
-            <Image src="./svg/email.svg" alt="email" width={40} height={40} />
+            <Image
+              src="/svg/email.svg"
+              alt="email"
+              width={40}
+              height={40}
+              className="h-10 w-10 max-w-none"
+            />
           </a>
           <a href="https://wa.me/233268051515" target="_blank">
             {" "}
             <Image
-              src="./svg/whatsapp.svg"
+              src="/svg/whatsapp.svg"
               alt="whatsapp"
               width={40}
               height={40}
+              className="h-10 w-10 max-w-none"
             />{" "}
           </a>
         </div>

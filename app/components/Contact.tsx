@@ -1,6 +1,11 @@
+"use client";
+
 import Link from "next/link";
+import { FormEvent } from "react";
 import { FiGithub, FiLinkedin, FiMail, FiMapPin } from "react-icons/fi";
 import { SiWhatsapp } from "react-icons/si";
+
+const CONTACT_EMAIL = "averylbk@gmail.com";
 
 const social = [
   {
@@ -24,6 +29,22 @@ const cardClass =
   "rounded-lg border border-[#333]/40 bg-[#222]/40 p-4 md:p-8 text-[#c7c7c7]";
 
 const Contact = () => {
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const formData = new FormData(event.currentTarget);
+    const name = formData.get("name")?.toString().trim() ?? "";
+    const email = formData.get("email")?.toString().trim() ?? "";
+    const message = formData.get("message")?.toString().trim() ?? "";
+
+    const subject = `Portfolio message from ${name || "website visitor"}`;
+    const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+  };
+
   return (
     <div className="lg:py-6 pb-10 lg:px-8 px-4 max-w-6xl mx-auto">
       <header className="mx-auto max-w-2xl text-center">
@@ -42,7 +63,7 @@ const Contact = () => {
           <h2 className="font-bold text-xl mb-6 text-white">
             Send a message
           </h2>
-          <form action="" className="space-y-4 max-w-lg">
+          <form onSubmit={handleSubmit} className="space-y-4 max-w-lg">
             <div>
               <label htmlFor="name" className="block text-sm text-[#c7c7c7] mb-1">
                 Your name
@@ -108,11 +129,11 @@ const Contact = () => {
                 Email
               </p>
               <a
-                href="mailto:averylebene@gmail.com"
+                href="mailto:averylbk@gmail.com"
                 className="inline-flex items-center gap-2 text-green-200 hover:underline font-medium"
               >
                 <FiMail className="shrink-0" aria-hidden />
-                averylebene@gmail.com
+                averylbk@gmail.com
               </a>
             </div>
             <div>

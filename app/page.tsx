@@ -13,7 +13,7 @@ export default function Home() {
         </span>
       </div>
       <LatestProjects />
-      <LatestBlogs />
+      {/* <LatestBlogs /> */}
     </main>
   );
 }
